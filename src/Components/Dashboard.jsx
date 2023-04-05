@@ -8,10 +8,10 @@ const Dashboard = () => {
   return !token ? (
     <Login setToken={setToken} />
   ) : (
-    <div className="db-container">
+    <div className="Db-container">
       {(() => {
-        const { username, role } = jwtDecode(token).payload;
-        return <h1 className="db-heading">Welcome {username}!</h1>;
+        const { username } = jwtDecode(token).payload;
+        return <h1 className="Db-heading">Welcome {username}!</h1>;
       })()}
     </div>
   );

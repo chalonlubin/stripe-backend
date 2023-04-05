@@ -25,10 +25,10 @@ const Login = ({ setToken }) => {
   }
 
   return (
-    <div className="l-container">
+    <div className="Container">
       <h1>Sign Up Here</h1>
       {error !== undefined ? <p>{error}</p> : null}
-      <form onSubmit={handleSubmit} className="l-form">
+      <form onSubmit={handleSubmit} className="Login-form">
         <p>UserName</p>
         <input
           type="text"

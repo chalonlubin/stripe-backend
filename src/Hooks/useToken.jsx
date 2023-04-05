@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-/** Custom useToken hook, where we can hold all the functionality of tokens. */
+/** Custom useToken hook, contains functionality for tokens */
 const useToken = () => {
   const getToken = () => {
     const tokenString = sessionStorage.getItem("token");
-    console.log("tokenString - ", tokenString);
     const userToken = JSON.parse(tokenString);
-    console.log("userToken - ", userToken);
     return userToken?.token;
   };
 
